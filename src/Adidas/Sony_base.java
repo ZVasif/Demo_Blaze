@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.List;
 
-public class Sony extends BaseStaticDriver {
+public class Sony_base extends BaseStaticDriver {
 
         @Test(groups = "Login",priority = 1)
         public void login(){
@@ -50,8 +50,7 @@ public class Sony extends BaseStaticDriver {
 
     @Test(groups = "Dell",priority = 3)
     public void dell(){
-        driver.get("https://www.demoblaze.com/index.html");
-
+            driver.get("https://www.demoblaze.com/index.html");
         WebElement laptop=driver.findElement(By.linkText("Laptops"));
         laptop.click();
         WebElement dell=driver.findElement(By.linkText("Dell i7 8gb"));

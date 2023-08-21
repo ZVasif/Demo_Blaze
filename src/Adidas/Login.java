@@ -1,11 +1,10 @@
 package Adidas;
 
 import Utils.BaseStaticDriver;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.*;
 
 public class Login extends BaseStaticDriver {
 

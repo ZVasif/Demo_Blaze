@@ -4,7 +4,7 @@ import Utils.BaseStaticDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class Dell extends BaseStaticDriver {
+public class D_LL_01 extends BaseStaticDriver {
     public static void main(String[] args) {
 
         WebElement laptop=driver.findElement(By.linkText("Laptops"));

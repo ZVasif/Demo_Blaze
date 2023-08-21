@@ -3,11 +3,13 @@ package Utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.devtools.v101.runtime.Runtime;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 
 public class BaseStaticDriver {
         public static WebDriver driver;
@@ -17,6 +19,7 @@ public class BaseStaticDriver {
                 KalanOncekileriKapat();
                 Logger logger = Logger.getLogger("");
                 logger.setLevel(Level.SEVERE);
+
 
                 System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
                 System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
@@ -51,7 +54,7 @@ public class BaseStaticDriver {
         public static void KalanOncekileriKapat() {
 
                 try {
-                        Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
+                        Runtime.disable().equals("taskkill /F /IM chromedriver.exe /T");
                 } catch (Exception ignored) {
 
                 }
